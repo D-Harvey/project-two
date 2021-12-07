@@ -1,0 +1,21 @@
+.home {
+display: flex;
+justify-content: center;
+
+  .home-card {
+    margin: 20px;
+    padding: 20px;
+    width: 400px;;
+    height: 50vh;
+    border: solid black 1px;
+    border-radius: 5%;
+  }
+}
+
+.card-shadow {
+  border: 0.5px solid lightgrey;
+  border-radius: 15%;
+  margin: 10px;
+}
+
+@import '~bulma/bulma.sass';
