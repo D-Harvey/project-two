@@ -1,6 +1,11 @@
 .home {
 display: flex;
 justify-content: center;
+background-image: url('https://source.unsplash.com/random/900×700/?water');
+height: 100vh;
+// width: 1000px;
+background-position: contain;
+background-repeat: no-repeat;
 
   .home-card {
     margin: 20px;
@@ -8,10 +13,61 @@ justify-content: center;
     width: 400px;;
     height: 50vh;
     border: solid black 1px;
+    background-color: rgba(255, 255, 255, 0.4);
     border-radius: 5%;
+    text-align: center;
+  }
+
+  .chuck {
+    background-image: url('../styles/imgs/chuck.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 20px;
+    padding: 20px;
+    width: 400px;;
+    height: 50vh;
+    border: solid black 1px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 5%;
+    text-align: center;
   }
 }
 
+.background {
+  background-image: url('https://source.unsplash.com/random/900×700/?wellness');
+  height: 100vh;
+  width: 1000px;
+  background-position: contain;
+  background-repeat: no-repeat;
+    .text-css {
+      background-color: rgba(255, 255, 255, 0.5);
+      width: 1000px;
+    }
+}
+
+.background-two {
+  background-image: url('https://source.unsplash.com/random/900×700/?buddha');
+  height: 100vh;
+  width: 1000px;
+  background-position: contain;
+  background-repeat: no-repeat;
+    .text-css-two {
+      background-color: rgba(255, 255, 255, 0.5);
+      width: 1000px;
+    }
+} 
+
+.background-three {
+  background-image: url('https://source.unsplash.com/random/900×700/?nature');
+  height: 100vh;
+  width: 1000px;
+  background-position: contain;
+  background-repeat: no-repeat;
+    .text-css-three {
+      background-color: rgba(255, 255, 255, 0.5);
+      width: 1000px;
+    }
+} 
 .card-shadow {
   border: 0.5px solid lightgrey;
   border-radius: 15%;

@@ -18,6 +18,9 @@ function Nav() {
             <Link to="/create-quote" className="navbar-item">
                 Create a quote
             </Link>
+            <Link to="/chuck" className="navbar-item">
+                Chuck Me!
+            </Link>
           </div>
         </div>
       </div>

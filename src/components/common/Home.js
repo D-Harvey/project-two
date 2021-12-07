@@ -5,12 +5,17 @@ function Home() {
     <><div className="home">
       <Link Link to="/random-quote">
         <div className="home-card">
-          Get a random quote
+          Be Inspired
         </div>
       </Link>
       <Link to="/create-quote">
         <div className="home-card">
         Create your own quote card
+        </div>
+      </Link>
+      <Link to="/chuck">
+        <div className="chuck">
+
         </div>
       </Link>
     </div></>
