@@ -1,26 +1,24 @@
-import React, { useEffect, useState } from 'react'
-import axios from 'axios'
+import React from 'react'
+
+import { getKanyeQuotes } from '../../lib/api'
 
 function Kanye() {
-  const [state, setState] = useState({
-    joke: '',
-  })
-  useEffect( () => {
-    fetchData()
+
+  const [kanyeQuotes, setKanyeQuotes] = React.useState()
+  
+  React.useEffect(() => {
+    const pullData = async () => {
+      const quoteData = await getKanyeQuotes()
+      setKanyeQuotes(quoteData.data.quote)
+    }
+    pullData()
   }, [])
-  const fetchData = async () => {
-    const result = await axios.get('https://api.kanye.rest')
-    //console.log(result.data.quote)
-    setState({
-      ...state,
-      joke: result.data.quote,
-    })
-  }
+
   return (
 
     <div className="text-css">
       <div className="background-four">
-        <p className="title text-css-four">{state.joke} <br/> <span className="sub">  'Kanye West'</span></p>
+        <p className="title text-css-four">{kanyeQuotes} <br/> <span className="sub">Kanye West</span></p>
       </div>
     </div>
 

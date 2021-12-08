@@ -4,14 +4,14 @@ export function getAllQuotes() {
   return axios.get('https://type.fit/api/quotes')
 }
 
+export function getChuckQuotes() {
+  return axios.get('https://api.chucknorris.io/jokes/random')
+}
 
+export function getKanyeQuotes() {
+  return axios.get('https://api.kanye.rest')
+}
 
-
-export default function getImage() {
-  axios.create({
-    baseURL: 'https://api.pexels.com',
-    headers: {
-      Authorization: '563492ad6f917000010000016e0e9dbed1d74d1ebabdc39e7a3fb970',
-    },
-  })
+export function getRonQuotes() {
+  return axios.get('https://ron-swanson-quotes.herokuapp.com/v2/quotes')
 }

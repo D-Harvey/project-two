@@ -1,26 +1,24 @@
-import React, { useEffect, useState } from 'react'
-import axios from 'axios'
+import React from 'react'
+
+import { getChuckQuotes } from '../../lib/api'
 
 function Chuck() {
-  const [state, setState] = useState({
-    joke: '',
-  })
-  useEffect( () => {
-    fetchData()
+  const [chuckQuotes, setChuckQuotes] = React.useState('')
+  
+  React.useEffect(() => {
+    const pullData = async () => {
+      const quoteData = await getChuckQuotes()
+      setChuckQuotes(quoteData.data.value)
+    }
+    pullData()
   }, [])
-  const fetchData = async () => {
-    const result = await axios.get('https://api.chucknorris.io/jokes/random')
-    //console.log(result.data.value)
-    setState({
-      ...state,
-      joke: result.data.value,
-    })
-  }
-  return (
 
+  
+  return (
+  
     <div>
       <div className="background-two">
-        <p className="title text-css-two">{state.joke} <br/> <span className="sub">  'Chuck Norris'</span></p>
+        <p className="title text-css-two">{chuckQuotes} <br/> <span className="sub">Chuck Norris</span></p>
       </div>
     </div>
 
