@@ -21,6 +21,12 @@ function Nav() {
             <Link to="/chuck" className="navbar-item">
                 Chuck Me!
             </Link>
+            <Link to="/ron" className="navbar-item">
+                Lessons from Ron
+            </Link>
+            <Link to="/kanye" className="navbar-item">
+                Kanye wisdom
+            </Link>
           </div>
         </div>
       </div>

@@ -1,35 +1,70 @@
 .home {
 display: flex;
 justify-content: center;
+align-items: center;
 background-image: url('https://source.unsplash.com/random/900×700/?water');
-height: 100vh;
-// width: 1000px;
-background-position: contain;
+height: 90vh;
+margin: 5px;
+background-position: center;
 background-repeat: no-repeat;
+  .block {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 1080px;
+    height: 720px;
+    padding: 30px;
+    .home-card {
+      margin: 20px;
+      padding: 20px;
+      width: 300px;;
+      height: 30vh;
+      border: solid black 1px;
+      background-color: rgba(255, 255, 255, 0.4);
+      border-radius: 5%;
+      text-align: center;
+    }
 
-  .home-card {
-    margin: 20px;
-    padding: 20px;
-    width: 400px;;
-    height: 50vh;
-    border: solid black 1px;
-    background-color: rgba(255, 255, 255, 0.4);
-    border-radius: 5%;
-    text-align: center;
-  }
 
-  .chuck {
-    background-image: url('../styles/imgs/chuck.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    margin: 20px;
-    padding: 20px;
-    width: 400px;;
-    height: 50vh;
-    border: solid black 1px;
-    background-color: rgba(255, 255, 255, 0.4);
-    border-radius: 5%;
-    text-align: center;
+    .chuck {
+      background-image: url('../styles/imgs/chuck.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: 20px;
+      padding: 20px;
+      width: 300px;;
+      height: 30vh;
+      border: solid black 1px;
+      background-color: rgba(255, 255, 255, 0.4);
+      border-radius: 5%;
+      text-align: center;
+    }
+    .ron {
+      background-image: url('../styles/imgs/ron.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: 20px;
+      padding: 20px;
+      width: 300px;;
+      height: 30vh;
+      border: solid black 1px;
+      background-color: rgba(255, 255, 255, 0.4);
+      border-radius: 5%;
+      text-align: center;
+    }
+    .kanye {
+      background-image: url('../styles/imgs/kanye.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: 20px;
+      padding: 20px;
+      width: 300px;;
+      height: 30vh;
+      border: solid black 1px;
+      background-color: rgba(255, 255, 255, 0.4);
+      border-radius: 5%;
+      text-align: center;
+    }
   }
 }
 
@@ -66,6 +101,31 @@ background-repeat: no-repeat;
     .text-css-three {
       background-color: rgba(255, 255, 255, 0.5);
       width: 1000px;
+    }
+} 
+
+.background-four {
+  background-image: url('https://source.unsplash.com/random/900×700/?light');
+  height: 100vh;
+  width: 1000px;
+  background-position: contain;
+  background-repeat: no-repeat;
+    .text-css-four {
+      background-color: rgba(255, 255, 255, 0.5);
+      width: 1000px;
+      padding: 10px;
+    }
+} 
+.background-five {
+  background-image: url('https://source.unsplash.com/random/900×700/?light');
+  height: 100vh;
+  width: 1000px;
+  background-position: contain;
+  background-repeat: no-repeat;
+    .text-css-five {
+      background-color: rgba(255, 255, 255, 0.5);
+      width: 1000px;
+      padding: 10px;
     }
 } 
 .card-shadow {

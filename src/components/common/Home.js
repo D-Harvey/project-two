@@ -3,21 +3,34 @@ import { Link } from 'react-router-dom'
 function Home() {
   return (
     <><div className="home">
-      <Link Link to="/random-quote">
-        <div className="home-card">
+      <div className="block">
+        <Link Link to="/random-quote">
+          <div className="home-card">
           Be Inspired
-        </div>
-      </Link>
-      <Link to="/create-quote">
-        <div className="home-card">
+          </div>
+        </Link>
+        <Link to="/create-quote">
+          <div className="home-card">
         Create your own quote card
-        </div>
-      </Link>
-      <Link to="/chuck">
-        <div className="chuck">
-
-        </div>
-      </Link>
+          </div>
+        </Link>
+        <Link to="/chuck">
+          <div className="chuck">
+          </div>
+        </Link>
+        <Link to="/ron">
+          <div className="ron">
+          </div>
+        </Link>
+        <Link to="/kanye">
+          <div className="kanye">
+          </div>
+        </Link>
+        <Link to="/chuck">
+          <div className="chuck">
+          </div>
+        </Link>
+      </div>
     </div></>
   )
 }
