@@ -18,9 +18,9 @@ function Ron() {
   }
   return (
 
-    <div className="hero-body text-css">
+    <div className="text-css">
       <div className="background-five">
-        <p className="title text-css-five">{state.joke}</p>
+        <p className="title text-css-five">{state.joke} <br/> <span className="sub">  'Ron Swanson'</span></p>
       </div>
     </div>
 

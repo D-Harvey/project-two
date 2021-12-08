@@ -43,9 +43,9 @@ function RandomQuoteCard() {
 
 
     
-    <section className="hero quote-card background-three">
+    <section className="background-three">
       {quotesWithId ? (
-        <div className="hero-body text-css-three">
+        <div className="text-css-three">
           <p className="title">{quotesWithId[randomNumber].text}</p>
           <p className="subtitle">{quotesWithId[randomNumber].author}</p>
         </div>

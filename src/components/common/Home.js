@@ -4,16 +4,6 @@ function Home() {
   return (
     <><div className="home">
       <div className="block">
-        <Link Link to="/random-quote">
-          <div className="home-card">
-          Be Inspired
-          </div>
-        </Link>
-        <Link to="/create-quote">
-          <div className="home-card">
-        Create your own quote card
-          </div>
-        </Link>
         <Link to="/chuck">
           <div className="chuck">
           </div>
@@ -26,8 +16,14 @@ function Home() {
           <div className="kanye">
           </div>
         </Link>
-        <Link to="/chuck">
-          <div className="chuck">
+        <Link Link to="/random-quote">
+          <div className="home-card">
+          Be Inspired
+          </div>
+        </Link>
+        <Link to="/create-quote">
+          <div className="home-card">
+        Create your own quote card
           </div>
         </Link>
       </div>

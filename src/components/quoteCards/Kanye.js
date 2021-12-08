@@ -18,9 +18,9 @@ function Kanye() {
   }
   return (
 
-    <div className="hero-body text-css">
+    <div className="text-css">
       <div className="background-four">
-        <p className="title text-css-four">{state.joke}</p>
+        <p className="title text-css-four">{state.joke} <br/> <span className="sub">  'Kanye West'</span></p>
       </div>
     </div>
 

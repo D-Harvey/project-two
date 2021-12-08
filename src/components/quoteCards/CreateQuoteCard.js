@@ -2,7 +2,6 @@ import React from 'react'
 import { getAllQuotes } from '../../lib/api'
 import Loading from '../common/Loading'
 import { v4 as uuidv4 } from 'uuid'
-import { Link } from 'react-router-dom'
 
 
 // const chosenQuote='ANON'
@@ -61,22 +60,24 @@ function CreateQuoteCard() {
 
   const handleClick = (e) => {
     setChosenQuote(e.target.id)
-    console.log(e.target.id)
+    console.log('here', e.target)
   }
 
   console.log('click', clicked)
 
   return (
 
-    <><section>
-      <input className="input is-large is-rounded"
-        type="text"
-        placeholder="Large input"
-        onChange={handleSearch} />
-    </section><section className="hero quote-card">
-      {isLoading && <Loading />}
-      <div className="card">
-        {noSearch && !clicked &&
+    <div>
+      <section>
+        <input className={clicked ? 'search-hidden' : 'input is-large is-rounded'}
+          type="text"
+          placeholder="Large input"
+          onChange={handleSearch} />
+      </section>
+      <section className="hero quote-card">
+        {isLoading && <Loading />}
+        <div className="card">
+          {noSearch && !clicked &&
       quotesWithId.map(quote => (
         // <Link to="/custom-quote"
         //   key={quote.id} 
@@ -97,46 +98,50 @@ function CreateQuoteCard() {
         </div>  
         // </Link>
       ))
-        }
-      </div>
-      <div className="card">
-        {yesSearch && !clicked && (
-          filteredQuotes(quotesWithId).map(quote => (
-            <div className="card-content card-shadow" 
-              key={quote.id} 
-              value={quote.id}>
-              <p className="title">
-                {quote.text}
-              </p>
-              <p className="subtitle">
-                {quote.author}
-              </p>
-            </div>  
-        
-          )))
-        }
-      </div>
-
-
-      <div className="card">
-        {clicked && (
-          selectedQuotes(quotesWithId).map(quote => (
-            <section className="hero quote-card background"
-              key={quote.id} >
-              <div className="hero-body text-css" 
-                value={quote.id}>
-                <p className="title">
+          }
+        </div>
+        <div className="card">
+          {yesSearch && !clicked && (
+            filteredQuotes(quotesWithId).map(quote => (
+              <div className="card-content card-shadow" 
+                key={quote.id} 
+                value={quote.id}
+                id={quote.id}
+                onClick={handleClick}>
+                <p className="title"
+                  id={quote.id}>
                   {quote.text}
                 </p>
-                <p className="subtitle">
+                <p className="subtitle"
+                  id={quote.id}>
                   {quote.author}
                 </p>
               </div>  
-            </section>
-          )))
-        }
-      </div>
-    </section></>
+        
+            )))
+          }
+        </div>
+
+
+        <div className="card">
+          {clicked && (
+            selectedQuotes(quotesWithId).map(quote => (
+              <section className="background"
+                key={quote.id} >
+                <div className="text-css" 
+                  value={quote.id}>
+                  <p className="title">
+                    {quote.text}
+                  </p>
+                  <p className="subtitle">
+                    {quote.author}
+                  </p>
+                </div>  
+              </section>
+            )))
+          }
+        </div>
+      </section></div>
 
   )
 

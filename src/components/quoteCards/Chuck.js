@@ -18,9 +18,9 @@ function Chuck() {
   }
   return (
 
-    <div className="hero-body text-css">
+    <div>
       <div className="background-two">
-        <p className="title text-css-two">{state.joke}</p>
+        <p className="title text-css-two">{state.joke} <br/> <span className="sub">  'Chuck Norris'</span></p>
       </div>
     </div>
 
